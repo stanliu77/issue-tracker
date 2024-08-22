@@ -10,6 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import createIssueSchema from '@/app/validationSchema';
 import { z } from 'zod';
 import ErrorMessage from '@/app/components/ErrorMessage';
+import delay from 'delay';
 
 type IssueForm = z.infer<typeof createIssueSchema>
 const newIssue = () => {
@@ -19,6 +20,7 @@ const newIssue = () => {
         resolver: zodResolver(createIssueSchema)
     })
     const [error, setError] = useState("")
+    
     return (
         <div className='max-w-xl'>
             {error && <Callout.Root className='mb-5' color='red'>
