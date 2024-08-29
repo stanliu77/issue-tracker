@@ -15,7 +15,7 @@ const DeleteButton = ({ issue }: Props) => {
         try {
             setIsDelete(true)
             await axios.delete("/api/issues/" + issue.id)
-        router.push("/issues")
+        router.push("/issues/list")
         router.refresh()
         } catch (error) {
             setError(true)
