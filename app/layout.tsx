@@ -4,6 +4,13 @@ import { Inter } from 'next/font/google'
 import Navbar from './Navbar'
 import '@radix-ui/themes/styles.css';
 import { Container, Theme } from '@radix-ui/themes';
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,13 +25,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
-      <Theme>
-        <Navbar/>
-        <Container><main className='p-5'>{children}</main></Container>
-      </Theme>
+          <Theme>
+            <Navbar />
+            <Container><main className='p-5'>{children}</main></Container>
+          </Theme>
       </body>
     </html>
+    </ClerkProvider>
   )
 }
