@@ -6,10 +6,6 @@ import '@radix-ui/themes/styles.css';
 import { Container, Theme } from '@radix-ui/themes';
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ['latin'] })
