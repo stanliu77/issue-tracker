@@ -6,7 +6,7 @@ interface Props{
 }
 const EditorButton = ({issue}:Props) => {
   return (
-    <Button><Link href={`/issues/${issue.id}/edit`}>Edit</Link></Button>
+    <Button><Link href={`/issues/${issue.id}/edit`} >Edit</Link></Button>
   )
 }
 

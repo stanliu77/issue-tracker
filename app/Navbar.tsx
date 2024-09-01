@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className='flex justify-between border-b mb-5 px-5 h-14 items-center'>
       <div className='flex space-x-6'>
-      <Link href="/"><AiFillBug /></Link>
+      <Link href="/" className='py-1'><AiFillBug /></Link>
       <ul className='flex space-x-6'>
         {navlist.map(nav => <li key={nav.name}><Link key={nav.href} href={nav.href}
           className={classNames({
