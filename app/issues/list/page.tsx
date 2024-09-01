@@ -1,8 +1,9 @@
 import { Status } from '@prisma/client'
 import IssueActions from './IssueActions'
-import IssueTable, { columnNames, IssueQuery } from './IssueTable'
+import IssueTable, { IssueQuery } from './IssueTable'
 import prisma from '@/prisma/client'
 import Pagination from '@/app/components/Pagination'
+import { Metadata } from 'next'
 interface Props{
   searchParams : IssueQuery
 }
@@ -32,5 +33,8 @@ const issuesPage = async ({searchParams}:Props) => {
     </div>
   )
 }
-
+export const metadata: Metadata = {
+  title: 'Issue Tracker - Issue List',
+  description: 'View all project issues'
+}
 export default issuesPage

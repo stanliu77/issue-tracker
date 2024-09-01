@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import prisma from '@/prisma/client'
 import { notFound } from 'next/navigation'
 import IssueFormSkelenton from './loading'
+import { Metadata } from 'next'
 interface Props {
   params: { id: string }
 }
@@ -22,3 +23,7 @@ const NewsEdit = async ({ params }: Props) => {
   )
 }
 export default NewsEdit
+export const metadata:Metadata = {
+  title:'Edit Issue',
+  description:"Edit Issue"
+}
