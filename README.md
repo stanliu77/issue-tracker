@@ -12,6 +12,20 @@ and **Prisma** for database management. Authentication and authorization are han
 -**Clerk** for authentication and user management
 Below are screenshots that showcase the key features of this application:
 
+### **Sign-In Page**  
+![Sign-In Page](public/Sign-In.jpg)
+
+### **Dashboard**  
+![Dashboard Overview](public/Dashboard.jpg)
+
+### **Issues List**  
+![Issues List](public/IssueList.jpg)
+
+### **Issue Detail View**  
+![Issue Detail View](public/Detail.jpg)
+
+### **Create New Issue**  
+![Create New Issue](public/createNew.jpg)
 
 ### Prerequisites
 Ensure you have the following installed in your development environment:
